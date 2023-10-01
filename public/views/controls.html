@@ -1,0 +1,7 @@
+{{ block "controls" . }}
+<div hx-ext="sse" sse-connect="/events" sse-swap="message">
+  Click Start to begin the counter
+</div>
+
+<button hx-post="/new-timing">Start</button>
+{{ end }}

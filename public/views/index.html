@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/static/style.css" />
+    <script src="/libs/htmx.min.js"></script>
+    <script src="/libs/htmx_sse.js"></script>
+
+    <title>Your TypeScript App</title>
+  </head>
+  <body>
+    <h1 class="text-blue-500 font-bold text-lg">
+      Hello <span class="test">world</span>!
+    </h1>
+
+    <div hx-get="/healthcheck" hx-trigger="load">Server not ok</div>
+
+    {{ template "controls" . }}
+
+    <script src="/static/bundle.js"></script>
+  </body>
+</html>
